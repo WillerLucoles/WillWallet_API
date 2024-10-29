@@ -1,0 +1,19 @@
+{
+  "name": "willwallet_api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "API_RestFull",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Willer",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
