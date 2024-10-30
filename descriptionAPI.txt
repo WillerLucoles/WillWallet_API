@@ -1,0 +1,17 @@
+API Restfull
+
+Front-end => Back-end => Banco de Dados
+
+Método do protocolo HTTP:
+Create -> POST
+Read -> GET
+Update -> PUT or PATCH
+Delete -> DELETE
+
+Setup:
+Node | Express | Nodemon | MongoDB | Dotenv | Bcrypt | JWT | JOI
+
+Arquitetura:
+ROTAS(Receber, mapear acessos) -> Controler(Pegar e tratar a resposta) -> Services(Validar a reposta) -> Respositories (Acessa o banco de dados) -> Banco de Dados(Dados Salvos)
+Servirá para isolar cada escala e facilitará cada manuntenção.
+
