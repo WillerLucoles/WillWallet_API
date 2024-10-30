@@ -1,7 +1,6 @@
 function signup(body) {
-    return body;
-
+  return body;
 }
-export default{
-    signup,
+export default {
+  signup,
 };

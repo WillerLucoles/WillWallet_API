@@ -15,3 +15,6 @@ Arquitetura:
 ROTAS(Receber, mapear acessos) -> Controler(Pegar e tratar a resposta) -> Services(Validar a reposta) -> Respositories (Acessa o banco de dados) -> Banco de Dados(Dados Salvos)
 Servirá para isolar cada escala e facilitará cada manuntenção.
 
+Dotenv = ocultar dados sensiveis.
+
+Banco de Dados será utilizado via MongoDB Atlas.
