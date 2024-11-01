@@ -1,3 +1,5 @@
+Start Nodemon: npx nodemon src/server.js
+
 API Restfull
 
 Front-end => Back-end => Banco de Dados
@@ -18,3 +20,6 @@ Servirá para isolar cada escala e facilitará cada manuntenção.
 Dotenv = ocultar dados sensiveis.
 
 Banco de Dados será utilizado via MongoDB Atlas.
+
+Bcryp para criptografar senhas
+
