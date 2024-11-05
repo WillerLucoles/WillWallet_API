@@ -4,12 +4,17 @@ import { authMiddleware } from "../middlewares/authMiddleware.js";
 
 const transactionRouter = Router();
 
+transactionRouter.use(authMiddleware)
+
 transactionRouter.post(
     "/transaction", 
-    authMiddleware, 
     transactionController.create
 );
 
+transactionRouter.get(
+    '/transaction',
+    transactionController.findAllByUser
+);
 
 
 export default transactionRouter;
