@@ -15,4 +15,10 @@ async function gerenateToken(id) {
     return jwt.sign({id}, process.env.SECRET, {expiresIn: 86400});
     
 }
-export default {create, findByEmail, gerenateToken};
+
+async function findById(id){
+    const user = await UserSchema.findById(id);
+    return user;
+}
+
+export default {create, findByEmail, gerenateToken, findById};
