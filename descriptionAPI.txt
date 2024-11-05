@@ -21,5 +21,8 @@ Dotenv = ocultar dados sensiveis.
 
 Banco de Dados será utilizado via MongoDB Atlas.
 
-Bcryp para criptografar senhas
+Bcryp para criptografar senhas.
+
+Validação de dados foi feita com Joi.
+
 
