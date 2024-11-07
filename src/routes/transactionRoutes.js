@@ -9,16 +9,22 @@ const transactionRouter = Router();
 transactionRouter.use(authMiddleware)
 
 transactionRouter.post(
-    "/transaction", 
+    "/", 
     validationSchemaMiddleware(createTransaction),
     transactionController.create
 );
 
 transactionRouter.get(
-    '/transaction',
-    
+    '/',    
     transactionController.findAllByUser
 );
+
+transactionRouter.put(
+    '/:id', 
+    transactionController.update
+);
+
+
 
 
 export default transactionRouter;

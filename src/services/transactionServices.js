@@ -11,5 +11,16 @@ async function findAllByUser(id) {
     return await transactionRespository.findAllByUser(id);    
 }
 
+async function update(id, body, userId) {
+    const transaction = await transactionRespository.findById(id);
+    if (!transaction) {
+        throw new Error("Transaction not found");
+    }
+    if (userId.toString() !== transaction.userId.toString()) {
+        throw new Error("You can't update a transaction that is not yours");
+    }
+    return await transactionRespository.update(id, body);
+}
 
-export default {create, findAllByUser};
+
+export default {create, findAllByUser, update};

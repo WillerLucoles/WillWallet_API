@@ -23,5 +23,21 @@ async function findAllByUser(req, res) {
     } 
 }
 
+async function update(req, res) {
+    const { id } = req.params;
+    const { _id: userId } = res.locals.user;
+    const body = req.body;
+    
+    console.log("ID da Transação:", id);
+    console.log("Corpo da Requisição:", body);
+    console.log("User ID autenticado:", userId);
+    
+    try {
+        await transactionService.update(id, body, userId);
+        return res.status(200).send("Transação atualizada com sucesso.");
+    } catch (err) {
+        return res.status(500).send(err.message);
+    }
+}
 
-export default {create, findAllByUser};
+export default {create, findAllByUser, update};
