@@ -24,6 +24,11 @@ transactionRouter.put(
     transactionController.update
 );
 
+transactionRouter.delete(
+    '/:id', 
+    transactionController.delete
+);
+
 
 
 

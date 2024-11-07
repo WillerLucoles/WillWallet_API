@@ -40,4 +40,17 @@ async function update(req, res) {
     }
 }
 
-export default {create, findAllByUser, update};
+async function deleteTransaction(req, res) {
+    const { id } = req.params;
+    const { _id: userId } = res.locals.user;
+
+    try {
+        await transactionService.delete(id, userId);
+        return res.status(200).send("Transação deletada com sucesso.");
+    } catch (err) {
+        return res.status(500).send(err.message);
+    }
+}
+
+
+export default { create, findAllByUser, update, delete: deleteTransaction };

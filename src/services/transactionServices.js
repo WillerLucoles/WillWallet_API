@@ -22,5 +22,15 @@ async function update(id, body, userId) {
     return await transactionRespository.update(id, body);
 }
 
+async function deleteTransaction(id, userId) {
+    const transaction = await transactionRespository.findById(id);
+    if (!transaction) {
+        throw new Error("Transaction not found");
+    }
+    if (userId.toString() !== transaction.userId.toString()) {
+        throw new Error("You can't delete a transaction that is not yours");
+    }
+    return await transactionRespository.delete(id);
+}
 
-export default {create, findAllByUser, update};
+export default { create, findAllByUser, update, delete: deleteTransaction };
