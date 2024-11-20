@@ -7,7 +7,7 @@ import cors from 'cors';
 const app = express();
 connectDb();
 app.use(json());
-app.use(cors);
+app.use(cors());
 app.use(authRouter);
 app.use(transactionRouter)
 
